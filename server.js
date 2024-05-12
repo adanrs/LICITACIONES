@@ -8,14 +8,17 @@ const app = express();
 app.use(express.json());
 // Middleware básico
 
-const licitacionesRoutes = require('./api/routes/licitacionesRoutes');
 
-app.use('/api/licitaciones', licitacionesRoutes);
+
 // Importar rutas
-const usersRoutes = require('./api/users/users.routes');
+const usersRoutes = require('./api/routes/users.routes');
+const licitacionesRoutes = require('./api/routes/licitacionesRoutes');
+const SBORoutes = require('./api/routes/SBORoutes');
 
 // Configuración de rutas
 app.use('/api/users', usersRoutes); // Rutas para la gestión de usuarios
+app.use('/api/licitaciones', licitacionesRoutes); // Rutas para licitaciones
+app.use('/api/sbo', SBORoutes); // Rutas para SAP Business One, nombre ajustado para claridad
 
 // Configuración del puerto
 const PORT = process.env.PORT || 3000;
