@@ -1,0 +1,17 @@
+# Archivos generados automáticamente
+node_modules/
+dist/
+coverage/
+.env
+
+# Archivos de configuración específicos del entorno local
+.env.local
+
+# Archivos de registro y datos generados
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/*.local
+
+# Dependiendo del editor que uses, puedes agregar más entradas aquí para ignorar archivos y directorios específicos de tu editor.
