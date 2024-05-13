@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Refine}
-
 import { useLogin } from '@pankod/refine';
 
 export const LoginPage: React.FC = () => {
