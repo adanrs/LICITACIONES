@@ -15,10 +15,14 @@ const usersRoutes = require('./api/routes/users.routes');
 const licitacionesRoutes = require('./api/routes/licitacionesRoutes');
 const SBORoutes = require('./api/routes/SBORoutes');
 
+const vendedorRoutes = require('./api/routes/vendedorRoutes');
 // Configuración de rutas
 app.use('/api/users', usersRoutes); // Rutas para la gestión de usuarios
 app.use('/api/licitaciones', licitacionesRoutes); // Rutas para licitaciones
 app.use('/api/sbo', SBORoutes); // Rutas para SAP Business One, nombre ajustado para claridad
+
+app.use('/api/vendedores', vendedorRoutes);
+
 
 // Configuración del puerto
 const PORT = process.env.PORT || 3000;
